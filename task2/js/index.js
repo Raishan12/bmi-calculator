@@ -22,7 +22,6 @@ button.addEventListener("click",()=>{
         return
     }
 
-
     let hm = (height.value/100)**2
     let wkg = weight.value
     let result = wkg/hm
