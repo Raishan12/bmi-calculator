@@ -3,9 +3,26 @@ let weight = document.getElementById("weight")
 let button = document.getElementById("button")
 let display = document.getElementById("result")
 
-
+let hpattern = /^[1-9][0-9]{0,2}$/
+let wpattern = /^[1-9][0-9]{0,2}$/
 
 button.addEventListener("click",()=>{
+    
+    if(!hpattern.test(height.value)){
+        alert("Enter the Correct value")
+        height.value = ""
+        weight.value = ""
+        return
+    }
+
+    if(!wpattern.test(weight.value)){
+        alert("Enter the Correct value")
+        height.value = ""
+        weight.value = ""
+        return
+    }
+
+
     let hm = (height.value/100)**2
     let wkg = weight.value
     let result = wkg/hm
